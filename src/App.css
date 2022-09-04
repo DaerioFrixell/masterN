@@ -1,5 +1,94 @@
 * {
   padding: 0;
   margin: 0;
+}
 
+.container {
+  display: grid;
+  grid-template-rows: 8vh 92vh;
+  grid-template-columns: 15vw 85vw;
+
+  grid-template-areas:
+    'hr hr'
+    'mL i';
+}
+
+.header {
+  padding: 15px 15px;
+  grid-area: hr;
+  background-color: #ff6d9124;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.menuList {
+  padding: 5px 15px;
+  grid-area: mL;
+  background-color: rgba(0, 0, 0, 0.064);
+  border-right: 1px solid rgba(77, 77, 77, 0.247);
+}
+
+.item {
+  padding: 5px 15px;
+  grid-area: i;
+  background-color: rgba(0, 0, 0, 0.064);
+}
+
+.defaultPhoto {
+  background-image: url('https://avatars.dzeninfra.ru/get-zen_doc/5227693/pub_6151af695f867d06a88b0899_6151af7b7b505c416854713d/scale_1200');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 20vw;
+  height: 40vh;
+  /* background-color: blue; */
+}
+
+.imgPicker {
+  text-align: center;
+  align-items: ;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 20vw;
+  height: 30vh;
+  /* background-image: url('https://i.trbna.com/preset/wysiwyg/1/62/779988edf11eb883a9d183ef0586b.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat; */
+  /* z-index: -1; */
+
+}
+
+.imgPicker:hover {
+  /* background-image: url('https://i.trbna.com/preset/wysiwyg/1/62/779988edf11eb883a9d183ef0586b.jpeg'); */
+  opacity: 1;
+  text-align: center;
+  border: 1px solid rgb(93, 72, 133);
+  background-color: rgba(46, 10, 81, 0.498);
+  cursor: pointer;
+  border-radius: 15px;
+  width: 20vw;
+  height: 30vh;
+  z-index: 2;
+
+
+  /* background-repeat: no-repeat; */
+}
+
+.nigga {
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.822);
+  color: white;
+}
+
+.menuItem {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menuItem:hover {
+  text-decoration: none;
+  color: rgba(90, 4, 117, 0.881)
 }
