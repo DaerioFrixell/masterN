@@ -1,20 +1,15 @@
 import React from "react";
-// import { useState } from "react";
+
 import ImagePicker from "./ImagePicker";
 
 const Form = () => {
-
-  // const [photo, setPhoto] = useState('null')
-  // const input = document.getElementsByClassName('input')
-  // let ar = []
-
-  const click = (e) => { }
-
-
+  const hundleSubmit = e => {
+    e.preventDefault();
+  }
 
   return (
     <div >
-      <form >
+      <form onSubmit={hundleSubmit} >
         <ImagePicker />
         <div><input placeholder="введите логин" /></div>
         <div><input placeholder="введите email" /></div>

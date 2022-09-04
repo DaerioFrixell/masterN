@@ -47,35 +47,11 @@
   /* background-color: blue; */
 }
 
-.imgPicker {
-  text-align: center;
-  align-items: ;
-  border: 1px solid black;
-  border-radius: 15px;
-  width: 20vw;
-  height: 30vh;
-  /* background-image: url('https://i.trbna.com/preset/wysiwyg/1/62/779988edf11eb883a9d183ef0586b.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat; */
-  /* z-index: -1; */
-
+.inputFile {
+  display: none;
 }
 
-.imgPicker:hover {
-  /* background-image: url('https://i.trbna.com/preset/wysiwyg/1/62/779988edf11eb883a9d183ef0586b.jpeg'); */
-  opacity: 1;
-  text-align: center;
-  border: 1px solid rgb(93, 72, 133);
-  background-color: rgba(46, 10, 81, 0.498);
-  cursor: pointer;
-  border-radius: 15px;
-  width: 20vw;
-  height: 30vh;
-  z-index: 2;
 
-
-  /* background-repeat: no-repeat; */
-}
 
 .nigga {
   height: 90vh;

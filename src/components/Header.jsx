@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import css from './OnStyleChange.module.css'
 
 const Header = () => {
+
   const [bg, setBg] = useState(null)
 
   const down = () => {
@@ -14,12 +16,11 @@ const Header = () => {
     setBg(css.onStyleChangeUp)
   }
 
-
   return (
-
     <div className="grid" >
       <div> Hi, I am Master-Header</div>
-      <div className={bg}
+      <div
+        className={bg}
         onMouseDown={() => down()}
         onMouseUp={() => up()}
       >practice with event listener</div>

@@ -1,8 +1,26 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
+import Button from "./UI/Button";
+
 
 const ImagePicker = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const myInput = useRef(null);
   // debugger;
+
+  // useEffect(() => {
+  //   console.log('didUpdate')
+  // }, [selectedImage])
+
+  const choosePhoto = () => {
+    myInput.current.click();
+  }
+
+  const onPhotoChange = event => {
+    console.log(event.target.files[0])
+    setSelectedImage(event.target.files[0]);
+  }
 
 
 
@@ -14,27 +32,23 @@ const ImagePicker = () => {
           <img
             alt="not fount"
             width={"250px"}
-            src={URL.createObjectURL(selectedImage)} />
+            src={URL.createObjectURL(selectedImage)}
+          />
+
+
           <div>
             <button onClick={() => setSelectedImage(null)}>remove</button>
           </div>
         </div>}
-      {/* {selectedImage && (
-        <div>
-          <img alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
-          <div><button onClick={() => setSelectedImage(null)}>remove</button></div>
-        </div>
-      )} */}
+
+      <Button choosePhoto={choosePhoto} />
 
       <input
+        className="inputFile"
         type="file"
-        name="myImage"
-        onChange={(event) => {
-          console.log(event);
-          setSelectedImage(event.target.files[0]);
-        }}
+        onChange={onPhotoChange}
+        ref={myInput}
       />
-
     </div>
   );
 };
