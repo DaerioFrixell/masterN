@@ -9,7 +9,7 @@ const Form = () => {
 
   return (
     <div >
-      <form onSubmit={hundleSubmit} >
+      <form onSubmit={hundleSubmit}>
         <ImagePicker />
         <div><input placeholder="введите логин" /></div>
         <div><input placeholder="введите email" /></div>

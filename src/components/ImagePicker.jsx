@@ -1,54 +1,54 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-import { useRef } from "react";
-import Button from "./UI/Button";
+import React, { useState, useRef } from 'react';
+// import { useEffect } from 'react';
+// import Button from './UI/Button';
+
+
+
 
 
 const ImagePicker = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
   const myInput = useRef(null);
-  // debugger;
+  const [image, setImage] = useState(null)
+  const [imageName, setImageName] = useState(null)
 
-  // useEffect(() => {
-  //   console.log('didUpdate')
-  // }, [selectedImage])
+  // const classes = []
+  // if (image) {
+  //   'true'
+  // } else 'false'
 
-  const choosePhoto = () => {
+  const click = () => {
+    console.log('button is pressed')
     myInput.current.click();
   }
 
-  const onPhotoChange = event => {
-    console.log(event.target.files[0])
-    setSelectedImage(event.target.files[0]);
+  const handler = event => {
+    event.preventDefault();
+    const file = myInput.current.files;
+    setImageName(file[0])
+    const url = URL.createObjectURL(file[0])
+    setImage(url)
   }
-
-
 
   return (
     <div>
-      {selectedImage === null
-        ? (<div className="defaultPhoto"></div>)
-        : <div>
-          <img
-            alt="not fount"
-            width={"250px"}
-            src={URL.createObjectURL(selectedImage)}
-          />
-
-
-          <div>
-            <button onClick={() => setSelectedImage(null)}>remove</button>
-          </div>
-        </div>}
-
-      <Button choosePhoto={choosePhoto} />
-
       <input
-        className="inputFile"
-        type="file"
-        onChange={onPhotoChange}
+        className='inputFile'
+        type='file'
         ref={myInput}
+        onChange={handler}
+        accept=".png, .jpg, .jpeg"
       />
+
+      <div className='WrapperImgPicker' onClick={click}>
+        <img className='PhotoImgPicker'
+          src={image
+            // ? image
+            // : ('https://avatars.dzeninfra.ru/get-zen_doc/5227693/pub_6151af695f867d06a88b0899_6151af7b7b505c416854713d/scale_1200')
+          }
+          alt='not found'
+        ></img>
+      </div>
+      <div>{imageName ? imageName.name : "choose a photo"}</div>
     </div>
   );
 };

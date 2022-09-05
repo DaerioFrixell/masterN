@@ -28,7 +28,6 @@ function App() {
           <Route path='Form' element={<Form />} />
           <Route path='SmthPage' element={<SmthPage />} />
           <Route path='Nigga' element={<Nigga />} />
-
         </Routes>
       </div>
     </div>
