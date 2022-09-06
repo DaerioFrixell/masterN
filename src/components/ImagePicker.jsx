@@ -9,12 +9,7 @@ import React, { useState, useRef } from 'react';
 const ImagePicker = () => {
   const myInput = useRef(null);
   const [image, setImage] = useState(null)
-  const [imageName, setImageName] = useState(null)
-
-  // const classes = []
-  // if (image) {
-  //   'true'
-  // } else 'false'
+  const [imageName, setImageName] = useState(null) //отображать название файла
 
   const click = () => {
     console.log('button is pressed')
@@ -24,7 +19,7 @@ const ImagePicker = () => {
   const handler = event => {
     event.preventDefault();
     const file = myInput.current.files;
-    setImageName(file[0])
+    setImageName(file[0]) //отображать название файла
     const url = URL.createObjectURL(file[0])
     setImage(url)
   }
@@ -40,15 +35,13 @@ const ImagePicker = () => {
       />
 
       <div className='WrapperImgPicker' onClick={click}>
-        <img className='PhotoImgPicker'
-          src={image
-            // ? image
-            // : ('https://avatars.dzeninfra.ru/get-zen_doc/5227693/pub_6151af695f867d06a88b0899_6151af7b7b505c416854713d/scale_1200')
-          }
-          alt='not found'
-        ></img>
+        {image
+          ? (<img className='PhotoImgPicker' src={image} alt={image} />)
+          : (<div className='emptyImgPickertext'>choose photo</div>)}
       </div>
+
       <div>{imageName ? imageName.name : "choose a photo"}</div>
+
     </div>
   );
 };

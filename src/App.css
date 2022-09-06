@@ -42,25 +42,98 @@
   display: none;
 }
 
+.emptyImgPickertext {
+  height: 50%;
+  padding-top: 17vh;
+  text-align: center;
+}
+
 .WrapperImgPicker {
-  width: 20vw;
-  height: 35vh;
+  width: 18vw;
+  height: 45vh;
 
   background-image: url(https://avatars.dzeninfra.ru/get-zen_doc/5227693/pub_6151af695f867d06a88b0899_6151af7b7b505c416854713d/scale_1200);
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 1vh;
 }
 
 .WrapperImgPicker:hover {
-  width: 20vw;
-  height: 35vh;
   opacity: .8;
 }
 
 .PhotoImgPicker {
-  width: 20vw;
-  height: 35vh;
+  width: 18vw;
+  height: 45vh;
 }
+
+
+/* ------- Form Page ---------*/
+.form {
+  margin-bottom: 5vh;
+}
+
+/* .formItemInput:first-child {
+  margin-top: 1vh;
+} */
+
+
+
+.formItemInput {
+  /* margin-top: 1vh; */
+  width: 17vw;
+  height: 3.5vh;
+  padding: 0px 10px;
+
+  border: 1px solid rgba(105, 105, 105, 0.269);
+  border-radius: 10px;
+}
+
+.formItemInput:focus {
+  outline: 1px solid rgba(180, 214, 245, 0.921);
+
+  padding: 0px 10px;
+
+}
+
+.formItemBtn {
+  padding: 0px 10px;
+
+  border: 1px solid rgba(105, 105, 105, 0.269);
+  border-radius: 10px;
+
+  opacity: .8;
+}
+
+.formItemBtn:hover {
+  background-color: rgba(180, 214, 245, 0.732);
+  opacity: 1;
+}
+
+
+.formAnswerItem {
+  align-items: center;
+  color: #333;
+  width: 20vw;
+
+  padding: 0px 10px;
+  margin-bottom: 1vh;
+
+  border: 1px solid rgba(105, 105, 105, 0.106);
+  border-radius: 10px;
+
+}
+
+.formAnswerSpan {
+
+  font-family: monospace;
+  font-size: 18px;
+  opacity: .9;
+
+}
+
+
+
 
 
 

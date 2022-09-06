@@ -5,16 +5,15 @@ use SCSS
 	on git bucket blocked (Ukraine war)
   --- on gitHub now. It was change later
 	on git lab;
-	--- настроить git ignore (added this file)
+	+ настроить git ignore (added this file)
 
 create brunch, but not master/main (later)
 
-сверстать форму
-placeholder на каритнку, пока не загружена.
-при клике "выбор картинке дэфолтный"
-при выборе img она отображается
-
-routing для форма, хуяции
++ сверстать форму
++ placeholder на каритнку, пока не загружена.
++ при клике "выбор картинке дэфолтный"
++ при выборе img она отображается
++ routing для форма, хуяции
 
 any validation
 
