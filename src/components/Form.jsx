@@ -62,13 +62,11 @@ const Form = () => {
           value={valueEmail}
           onChange={changeEmailInput} />
 
-
         <input
           className="formItemInput"
           placeholder="введите пароль"
           value={valuePassword}
           onChange={changePasswordInput} />
-
 
         <button
           className="formItemBtn"
