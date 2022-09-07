@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import './components/fail.scss'
 
 import './App.css';
 import Header from './components/Header';
