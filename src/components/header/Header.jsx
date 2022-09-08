@@ -1,9 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import './header.scss'
 
-const Header = () => {
-
+export const Header = () => {
   const [bg, setBg] = useState(null)
 
   const down = () => {
@@ -27,5 +25,3 @@ const Header = () => {
     </div >
   )
 }
-
-export default Header

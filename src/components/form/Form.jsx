@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import ImagePicker from "../imagePicker/ImagePicker";
+import { ImagePicker } from "../imagePicker/ImagePicker";
 import './form.scss'
 
-const Form = () => {
+export const Form = () => {
   const [login, setLogin] = useState('ваш логин')
   const [valueLogin, setValueLogin] = useState('')
 
@@ -25,9 +25,6 @@ const Form = () => {
     const value = event.target.value;
     setValuePassword(value);
   }
-
-
-
 
   const toSubmit = () => {
     setLogin(valueLogin)
@@ -82,5 +79,3 @@ const Form = () => {
     </div>
   )
 }
-
-export default Form

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './menuList.scss'
 
 
-const Menu = () => {
+export const Menu = () => {
   return (
     <div>
       <div ><Link className="menuItem" to='/smthPage'>SmthPage</Link></div>
@@ -14,5 +14,3 @@ const Menu = () => {
 
   )
 }
-
-export default Menu;

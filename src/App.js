@@ -5,11 +5,11 @@ import {
 } from "react-router-dom";
 
 import './App.css';
-import Header from './components/header/Header';
-import Menu from './components/menuList/MenuList';
-import Form from './components/form/Form';
-import SmthPage from './components/smthPage/SmthPage';
-import Nigga from './components/nigga/Nigga';
+import { Header } from './components/header/Header';
+import { Menu } from './components/menuList/MenuList';
+import { Form } from './components/form/Form';
+import { SmthPage } from './components/smthPage/SmthPage';
+import { Nigga } from './components/nigga/Nigga';
 
 
 
