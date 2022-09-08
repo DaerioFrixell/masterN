@@ -20,7 +20,7 @@ function App() {
       <div className='header'>
         <Header />
       </div>
-      <div className='menuList'>
+      <div className='menu-list'>
         <Menu />
       </div>
       <div className='routes'>

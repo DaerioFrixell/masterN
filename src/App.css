@@ -21,7 +21,7 @@
   background-color: #ff6d9124;
 }
 
-.menuList {
+.menu-list {
   padding: 5px 15px;
   grid-area: mL;
   background-color: rgba(0, 0, 0, 0.064);

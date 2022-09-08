@@ -1,60 +1,64 @@
+@use '../../scss/colors' as colors;
+
 .form {
   margin-bottom: 5vh;
+  display: grid;
+  grid-template-columns: 17vw;
+
+  &__item-input {
+    width: 17vw;
+    height: 4vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding: 0px 10px;
+
+    border: 1px solid rgba(105, 105, 105, 0.269);
+    border-radius: 10px;
+  }
+
+  &__item-input:focus {
+    outline: 1px solid colors.$myBlue;
+    padding: 0px 10px;
+
+  }
+
+  &__item-btn {
+    padding: 0px 10px;
+    border: 1px solid rgba(105, 105, 105, 0.269);
+    border-radius: 10px;
+    opacity: .8;
+  }
+
+  &__item-btn:hover {
+    background-color: colors.$myBlue;
+    opacity: 1;
+  }
+
+  &__answer-item {
+    align-items: center;
+    color: #333;
+    width: 20vw;
+
+    padding: 0px 10px;
+    margin-bottom: 1vh;
+
+    border: 1px solid rgba(105, 105, 105, 0.106);
+    border-radius: 10px;
+  }
+
+  &__answer-span {
+    font-family: monospace;
+    font-size: 18px;
+    opacity: .9;
+  }
 }
+
+
+
+
+
+
 
 /* .formItemInput:first-child {
   margin-top: 1vh;
 } */
-
-.formItemInput {
-  /* margin-top: 1vh; */
-  width: 17vw;
-  height: 3.5vh;
-  padding: 0px 10px;
-
-  border: 1px solid rgba(105, 105, 105, 0.269);
-  border-radius: 10px;
-}
-
-.formItemInput:focus {
-  outline: 1px solid rgba(180, 214, 245, 0.921);
-
-  padding: 0px 10px;
-
-}
-
-.formItemBtn {
-  padding: 0px 10px;
-
-  border: 1px solid rgba(105, 105, 105, 0.269);
-  border-radius: 10px;
-
-  opacity: .8;
-}
-
-.formItemBtn:hover {
-  background-color: rgba(180, 214, 245, 0.732);
-  opacity: 1;
-}
-
-
-.formAnswerItem {
-  align-items: center;
-  color: #333;
-  width: 20vw;
-
-  padding: 0px 10px;
-  margin-bottom: 1vh;
-
-  border: 1px solid rgba(105, 105, 105, 0.106);
-  border-radius: 10px;
-
-}
-
-.formAnswerSpan {
-
-  font-family: monospace;
-  font-size: 18px;
-  opacity: .9;
-
-}

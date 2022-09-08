@@ -5,13 +5,11 @@ export const Header = () => {
   const [bg, setBg] = useState(null)
 
   const down = () => {
-    console.log('down true')
-    setBg('onStyleChangeDown')
+    setBg('on-style-change-down')
   }
 
   const up = () => {
-    console.log('up true')
-    setBg('onStyleChangeUp')
+    setBg('on-style-change-up')
   }
 
   return (

@@ -48,34 +48,42 @@ export const Form = () => {
         <ImagePicker />
 
         <input
-          className="formItemInput"
+          className="form__item-input"
           placeholder="введите логин"
           value={valueLogin}
           onChange={changeLoginInput}
         />
 
         <input
-          className="formItemInput"
+          className="form__item-input"
           placeholder="введите email"
           value={valueEmail}
           onChange={changeEmailInput} />
 
         <input
-          className="formItemInput"
+          className="form__item-input"
           placeholder="введите пароль"
           value={valuePassword}
           onChange={changePasswordInput} />
 
         <button
-          className="formItemBtn"
+          className="form__item-btn"
           type="submit"
           onClick={toSubmit}
         >submit</button>
       </form>
 
-      <div className="formAnswerItem">ваш логин: <span className="formAnswerSpan" >{login}</span> </div>
-      <div className="formAnswerItem">ваш email: <span className="formAnswerSpan" >{email}</span></div>
-      <div className="formAnswerItem">ваш пароль: <span className="formAnswerSpan" >{password}</span></div>
+      <div className="form__answer-item">
+        ваш логин:<span className="form__answer-span" >{login}</span>
+      </div>
+
+      <div className="form__answer-item">
+        ваш email: <span className="form__answer-span">{email}</span>
+      </div>
+
+      <div className="form__answer-item">
+        ваш пароль: <span className="form__answer-span" >{password}</span>
+      </div>
     </div>
   )
 }

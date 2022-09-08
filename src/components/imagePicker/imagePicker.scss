@@ -1,14 +1,8 @@
-.inputFile {
+.input-file {
   display: none;
 }
 
-.emptyImgPickertext {
-  height: 50%;
-  padding-top: 17vh;
-  text-align: center;
-}
-
-.WrapperImgPicker {
+.wrapper-img-picker {
   width: 18vw;
   height: 45vh;
 
@@ -18,11 +12,17 @@
   margin-bottom: 1vh;
 }
 
-.WrapperImgPicker:hover {
+.wrapper-img-picker:hover {
   opacity: .8;
 }
 
-.PhotoImgPicker {
+.photo-img-picker {
   width: 18vw;
   height: 45vh;
+}
+
+.empty-img-picker-text {
+  height: 50%;
+  padding-top: 17vh;
+  text-align: center;
 }
