@@ -6,9 +6,9 @@ import './smthPage.scss'
 const SmthPage = () => {
 
   return (
-    <div>
+    <>
       a something page
-    </div>
+    </>
   );
 }
 

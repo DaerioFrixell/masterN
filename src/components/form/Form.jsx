@@ -44,11 +44,12 @@ const Form = () => {
   }
 
   return (
-    <div >
+    <>
+      <ImagePicker />
       <form
         className="form"
         onSubmit={hundleSubmit}>
-        <ImagePicker />
+
 
         <input
           className="formItemInput"
@@ -76,10 +77,19 @@ const Form = () => {
         >submit</button>
       </form>
 
-      <div className="formAnswerItem">ваш логин: <span className="formAnswerSpan" >{login}</span> </div>
-      <div className="formAnswerItem">ваш email: <span className="formAnswerSpan" >{email}</span></div>
-      <div className="formAnswerItem">ваш пароль: <span className="formAnswerSpan" >{password}</span></div>
-    </div>
+
+      <div className="formAnswerItem">
+        ваш логин: <span className="formAnswerSpan" >{login}</span>
+      </div>
+
+      <div className="formAnswerItem">
+        ваш email: <span className="formAnswerSpan" >{email}</span>
+      </div>
+
+      <div className="formAnswerItem">
+        ваш пароль: <span className="formAnswerSpan" >{password}</span>
+      </div>
+    </>
   )
 }
 
