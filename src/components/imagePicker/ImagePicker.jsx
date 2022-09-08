@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import './imagePicker.scss'
 // import { useEffect } from 'react';
 // import Button from './UI/Button';
 

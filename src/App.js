@@ -3,14 +3,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import './components/fail.scss'
 
 import './App.css';
-import Header from './components/Header';
-import Menu from './components/MenuList';
-import Form from './components/Form';
-import SmthPage from './components/SmthPage';
-import Nigga from './components/Nigga';
+import Header from './components/header/Header';
+import Menu from './components/menuList/MenuList';
+import Form from './components/form/Form';
+import SmthPage from './components/smthPage/SmthPage';
+import Nigga from './components/nigga/Nigga';
 
 
 
@@ -24,7 +23,7 @@ function App() {
       <div className='menuList'>
         <Menu />
       </div>
-      <div className='item'>
+      <div className='routes'>
         <Routes>
           <Route path='Form' element={<Form />} />
           <Route path='SmthPage' element={<SmthPage />} />

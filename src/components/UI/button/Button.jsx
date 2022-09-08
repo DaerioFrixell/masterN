@@ -4,7 +4,6 @@ const Button = ({ onClickchoosePhoto }) => {
 
   return (
     <div>
-      <label onClick={onClickchoosePhoto}>choosePhoto</label>
     </div>)
 }
 

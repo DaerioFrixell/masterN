@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import css from './OnStyleChange.module.css'
+import './header.scss'
 
 const Header = () => {
 
@@ -8,12 +8,12 @@ const Header = () => {
 
   const down = () => {
     console.log('down true')
-    setBg(css.onStyleChangeDown)
+    setBg('onStyleChangeDown')
   }
 
   const up = () => {
     console.log('up true')
-    setBg(css.onStyleChangeUp)
+    setBg('onStyleChangeUp')
   }
 
   return (

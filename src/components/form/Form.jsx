@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import ImagePicker from "./ImagePicker";
+import ImagePicker from "../imagePicker/ImagePicker";
+import './form.scss'
 
 const Form = () => {
   const [login, setLogin] = useState('ваш логин')
