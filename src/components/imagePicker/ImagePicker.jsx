@@ -4,7 +4,6 @@ import './imagePicker.scss'
 export const ImagePicker = () => {
   const myInput = useRef(null);
   const [image, setImage] = useState(null)
-  // const [imageName, setImageName] = useState(null) //отображать название файла
 
   const click = () => {
     console.log('button is pressed')
@@ -14,10 +13,13 @@ export const ImagePicker = () => {
   const handler = event => {
     event.preventDefault();
     const file = myInput.current.files;
-    // setImageName(file[0]) //отображать название файла
     const url = URL.createObjectURL(file[0])
     setImage(url)
   }
+
+  const viewImage = image
+    ? (<img className='wrapper-img-picker__photo' src={image} alt={image} />)
+    : (<div className='wrapper-img-picker__text'>choose photo</div>)
 
   return (
     <>
@@ -30,12 +32,8 @@ export const ImagePicker = () => {
       />
 
       <div className='wrapper-img-picker' onClick={click}>
-        {image
-          ? (<img className='wrapper-img-picker__photo' src={image} alt={image} />)
-          : (<div className='wrapper-img-picker__text'>choose photo</div>)}
+        {viewImage}
       </div>
-
-      {/* <div>{imageName ? imageName.name : "choose a photo"}</div> */}
     </>
   );
 };

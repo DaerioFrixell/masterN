@@ -4,11 +4,10 @@ import './menuList.scss'
 
 export const MenuList = () => {
   return (
-    <div className="menu-list">
-      <div><Link className="menu-item" to='/smthPage'>SmthPage</Link></div>
-      <div><Link className="menu-item" to='/form'>Form</Link></div>
-      <div><Link className="menu-item" to='/nigga'>Black Nigga</Link></div>
-    </div>
-
+    <nav className="menu-list">
+      <Link className="menu-item" to='/smthPage'>SmthPage</Link>
+      <Link className="menu-item" to='/form'>Form</Link>
+      <Link className="menu-item" to='/nigga'>Black Nigga</Link>
+    </nav>
   )
 }

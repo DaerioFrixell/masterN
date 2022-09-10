@@ -1,12 +1,18 @@
 @use '../../scss/fonts' as fonts;
 
-.menu-item {
+.menu-list {
   font-size: fonts.$mainFont;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 4.5vh);
+}
+
+.menu-item {
   text-decoration: none;
   color: inherit;
 }
 
 .menu-item:hover {
-  text-decoration: none;
   color: rgba(90, 4, 117, 0.881)
 }

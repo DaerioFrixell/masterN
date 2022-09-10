@@ -72,17 +72,15 @@ export const Form = () => {
         >submit</button>
       </form>
 
-      <div className="form__answer">
-        ваш логин:<span className="form__answer-span" >{login}</span>
-      </div>
-
-      <div className="form__answer">
-        ваш email: <span className="form__answer-span">{email}</span>
-      </div>
-
-      <div className="form__answer">
-        ваш пароль: <span className="form__answer-span" >{password}</span>
-      </div>
+      <p className="form__answer">
+        ваш логин:<span className="form__answer-value" >{login}</span>
+      </p>
+      <p className="form__answer">
+        ваш email: <span className="form__answer-value">{email}</span>
+      </p>
+      <p className="form__answer">
+        ваш пароль: <span className="form__answer-value" >{password}</span>
+      </p>
     </div>
   )
 }
