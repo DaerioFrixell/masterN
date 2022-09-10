@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { ImagePicker } from "../imagePicker/ImagePicker";
 import './form.scss'
 
@@ -36,7 +35,7 @@ export const Form = () => {
     setValuePassword('')
   }
 
-  const hundleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault();
   }
 
@@ -44,7 +43,7 @@ export const Form = () => {
     <div >
       <form
         className="form"
-        onSubmit={hundleSubmit}>
+        onSubmit={handleSubmit}>
         <ImagePicker />
 
         <input
@@ -73,15 +72,15 @@ export const Form = () => {
         >submit</button>
       </form>
 
-      <div className="form__answer-item">
+      <div className="form__answer">
         ваш логин:<span className="form__answer-span" >{login}</span>
       </div>
 
-      <div className="form__answer-item">
+      <div className="form__answer">
         ваш email: <span className="form__answer-span">{email}</span>
       </div>
 
-      <div className="form__answer-item">
+      <div className="form__answer">
         ваш пароль: <span className="form__answer-span" >{password}</span>
       </div>
     </div>

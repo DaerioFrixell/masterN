@@ -1,4 +1,5 @@
 @use '../../scss/colors' as colors;
+@use '../../scss/fonts' as fonts;
 
 .form {
   margin-bottom: 5vh;
@@ -6,7 +7,9 @@
   grid-template-columns: 17vw;
 
   &__item-input {
-    width: 17vw;
+    font-size: fonts.$mainFont;
+
+    width: 17.5vw;
     height: 4vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -18,12 +21,12 @@
 
   &__item-input:focus {
     outline: 1px solid colors.$myBlue;
-
-
   }
 
   &__item-btn {
-    width: 18.4vw;
+    font-size: fonts.$mainFont;
+
+    width: 17.5vw;
     height: 4vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -39,31 +42,21 @@
     opacity: 1;
   }
 
-  &__answer-item {
-    align-items: center;
+  &__answer {
+    font-size: fonts.$mainFont;
     color: #333;
-    width: 20vw;
 
+    width: 22vw;
+    align-items: center;
     padding: 0rem .4rem;
     margin-bottom: 1vh;
-
     border: 1px solid rgba(105, 105, 105, 0.106);
     border-radius: 10px;
   }
 
   &__answer-span {
+    font-size: fonts.$mainFont;
     font-family: monospace;
-    font-size: 18px;
     opacity: .9;
   }
 }
-
-
-
-
-
-
-
-/* .formItemInput:first-child {
-  margin-top: 1vh;
-} */

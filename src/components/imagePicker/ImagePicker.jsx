@@ -20,7 +20,7 @@ export const ImagePicker = () => {
   }
 
   return (
-    <div>
+    <>
       <input
         className='input-file'
         type='file'
@@ -31,11 +31,11 @@ export const ImagePicker = () => {
 
       <div className='wrapper-img-picker' onClick={click}>
         {image
-          ? (<img className='photo-img-picker' src={image} alt={image} />)
-          : (<div className='empty-img-picker-text'>choose photo</div>)}
+          ? (<img className='wrapper-img-picker__photo' src={image} alt={image} />)
+          : (<div className='wrapper-img-picker__text'>choose photo</div>)}
       </div>
 
       {/* <div>{imageName ? imageName.name : "choose a photo"}</div> */}
-    </div>
+    </>
   );
 };

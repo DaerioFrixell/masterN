@@ -1,4 +1,7 @@
+@use '../../scss/fonts' as fonts;
+
 .menu-item {
+  font-size: fonts.$mainFont;
   text-decoration: none;
   color: inherit;
 }

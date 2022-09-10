@@ -1,0 +1,26 @@
+.app {
+  background-color: rgba(116, 115, 115, 0.064);
+  display: grid;
+  grid-template-rows: 8vh 92vh;
+  grid-template-columns: 15vw 85vw;
+  grid-template-areas:
+    'hr hr'
+    'mL r';
+
+  &__header {
+    padding: 15px 15px;
+    grid-area: hr;
+    background-color: #f985a23e;
+  }
+
+  &__menu-list {
+    padding: 5px 15px;
+    grid-area: mL;
+    border-right: 1px solid rgba(77, 77, 77, 0.247);
+  }
+
+  &__routes {
+    padding: 5px 15px;
+    grid-area: r;
+  }
+}
