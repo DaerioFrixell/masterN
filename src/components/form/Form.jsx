@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { ImagePicker } from "../imagePicker/ImagePicker";
+import './form.scss'
 
-import ImagePicker from "./ImagePicker";
-
-const Form = () => {
+export const Form = () => {
   const [login, setLogin] = useState('ваш логин')
   const [valueLogin, setValueLogin] = useState('')
 
@@ -25,9 +25,6 @@ const Form = () => {
     setValuePassword(value);
   }
 
-
-
-
   const toSubmit = () => {
     setLogin(valueLogin)
     setEmail(valueEmail)
@@ -38,7 +35,7 @@ const Form = () => {
     setValuePassword('')
   }
 
-  const hundleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault();
   }
 
@@ -46,42 +43,44 @@ const Form = () => {
     <div >
       <form
         className="form"
-        onSubmit={hundleSubmit}>
+        onSubmit={handleSubmit}>
         <ImagePicker />
 
         <input
-          className="formItemInput"
+          className="form__item-input"
           placeholder="введите логин"
           value={valueLogin}
           onChange={changeLoginInput}
         />
 
         <input
-          className="formItemInput"
+          className="form__item-input"
           placeholder="введите email"
           value={valueEmail}
           onChange={changeEmailInput} />
 
-
         <input
-          className="formItemInput"
+          className="form__item-input"
           placeholder="введите пароль"
           value={valuePassword}
           onChange={changePasswordInput} />
 
-
         <button
-          className="formItemBtn"
+          className="form__item-btn"
           type="submit"
           onClick={toSubmit}
         >submit</button>
       </form>
 
-      <div className="formAnswerItem">ваш логин: <span className="formAnswerSpan" >{login}</span> </div>
-      <div className="formAnswerItem">ваш email: <span className="formAnswerSpan" >{email}</span></div>
-      <div className="formAnswerItem">ваш пароль: <span className="formAnswerSpan" >{password}</span></div>
+      <p className="form__answer">
+        ваш логин:<span className="form__answer-value" >{login}</span>
+      </p>
+      <p className="form__answer">
+        ваш email: <span className="form__answer-value">{email}</span>
+      </p>
+      <p className="form__answer">
+        ваш пароль: <span className="form__answer-value" >{password}</span>
+      </p>
     </div>
   )
 }
-
-export default Form
