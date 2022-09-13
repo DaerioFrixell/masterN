@@ -48,12 +48,9 @@ export const Form = () => {
     console.log(`ваш пароль: ${password}`)
   }, [login, email, password])
 
-
   return (
     <div >
-      <form
-        className="form"
-        onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <ImagePicker />
         <MyInput
           valueLogin={valueLogin} changeLoginInput={changeLoginInput}

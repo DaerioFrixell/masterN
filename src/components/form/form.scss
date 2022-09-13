@@ -5,26 +5,4 @@
   margin-bottom: 5vh;
   display: grid;
   grid-template-columns: 17vw;
-
-
-
-
-
-  &__answer {
-    font-size: fonts.$mainFont;
-    color: #333;
-
-    width: 22vw;
-    align-items: center;
-    padding: 0rem .4rem;
-    margin-bottom: 1vh;
-    border: 1px solid rgba(105, 105, 105, 0.106);
-    border-radius: 10px;
-  }
-
-  &__answer-value {
-    font-size: fonts.$mainFont;
-    font-family: monospace;
-    opacity: .9;
-  }
 }
