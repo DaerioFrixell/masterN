@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { ImagePicker } from "../imagePicker/ImagePicker";
 import './form.scss'
+import { MyInput } from "../UI/input/Input";
+import { MyButton } from "../UI/button/Button";
+import { useEffect } from "react";
 
 export const Form = () => {
   const [login, setLogin] = useState('ваш логин')
@@ -39,48 +42,26 @@ export const Form = () => {
     e.preventDefault();
   }
 
+  useEffect(() => {
+    console.log(`ваш логин: ${login}`)
+    console.log(`ваш email: ${email}`)
+    console.log(`ваш пароль: ${password}`)
+  }, [login, email, password])
+
+
   return (
     <div >
       <form
         className="form"
         onSubmit={handleSubmit}>
         <ImagePicker />
-
-        <input
-          className="form__item-input"
-          placeholder="введите логин"
-          value={valueLogin}
-          onChange={changeLoginInput}
+        <MyInput
+          valueLogin={valueLogin} changeLoginInput={changeLoginInput}
+          valueEmail={valueEmail} changeEmailInput={changeEmailInput}
+          valuePassword={valuePassword} changePasswordInput={changePasswordInput}
         />
-
-        <input
-          className="form__item-input"
-          placeholder="введите email"
-          value={valueEmail}
-          onChange={changeEmailInput} />
-
-        <input
-          className="form__item-input"
-          placeholder="введите пароль"
-          value={valuePassword}
-          onChange={changePasswordInput} />
-
-        <button
-          className="form__item-btn"
-          type="submit"
-          onClick={toSubmit}
-        >submit</button>
+        <MyButton toSubmit={toSubmit} />
       </form>
-
-      <p className="form__answer">
-        ваш логин:<span className="form__answer-value" >{login}</span>
-      </p>
-      <p className="form__answer">
-        ваш email: <span className="form__answer-value">{email}</span>
-      </p>
-      <p className="form__answer">
-        ваш пароль: <span className="form__answer-value" >{password}</span>
-      </p>
     </div>
   )
 }

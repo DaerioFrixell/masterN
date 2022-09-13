@@ -2,9 +2,11 @@ in main REP - create brach
 loc REP - git pull -> git cheackout name
 
 name -> commit -> push ...
-
 create merge req 
-
 git push
 
-git 
+after PR:
+с мейна -> git pull
+переходишь в нужную ветку -> merge main
+
+

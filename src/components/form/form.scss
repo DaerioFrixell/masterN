@@ -6,41 +6,9 @@
   display: grid;
   grid-template-columns: 17vw;
 
-  &__item-input {
-    font-size: fonts.$mainFont;
 
-    width: 17.5vw;
-    height: 4vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    padding: 0rem .4rem;
 
-    border: 1px solid rgba(105, 105, 105, 0.269);
-    border-radius: 10px;
-  }
 
-  &__item-input:focus {
-    outline: 1px solid colors.$myBlue;
-  }
-
-  &__item-btn {
-    font-size: fonts.$mainFont;
-
-    width: 17.5vw;
-    height: 4vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    padding: 0rem .4rem;
-
-    border: 1px solid rgba(105, 105, 105, 0.269);
-    border-radius: 10px;
-    opacity: .8;
-  }
-
-  &__item-btn:hover {
-    background-color: colors.$myBlue;
-    opacity: 1;
-  }
 
   &__answer {
     font-size: fonts.$mainFont;

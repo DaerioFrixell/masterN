@@ -1,10 +1,13 @@
 import React from "react";
+import "./button.scss"
 
-const Button = ({ onClickchoosePhoto }) => {
+export const MyButton = ({ toSubmit }) => {
 
   return (
-    <div>
-    </div>)
+    <button
+      className="my-button"
+      type="submit"
+      onClick={toSubmit}
+    >submit</button>
+  )
 }
-
-export default Button;
