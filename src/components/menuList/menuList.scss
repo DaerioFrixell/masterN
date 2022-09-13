@@ -6,13 +6,13 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 4.5vh);
-}
 
-.menu-item {
-  text-decoration: none;
-  color: inherit;
-}
+  &__link {
+    text-decoration: none;
+    color: inherit;
 
-.menu-item:hover {
-  color: rgba(90, 4, 117, 0.881)
+    &:hover {
+      color: rgba(90, 4, 117, 0.881)
+    }
+  }
 }

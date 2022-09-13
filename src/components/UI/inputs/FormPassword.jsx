@@ -7,6 +7,7 @@ export const FormPassword = ({ value, setValue }) => {
       className="my-input"
       placeholder="введите пароль"
       value={value}
-      onChange={setValue} />
+      onChange={setValue}
+    />
   )
 }

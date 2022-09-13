@@ -5,9 +5,9 @@ import './menuList.scss'
 export const MenuList = () => {
   return (
     <nav className="menu-list">
-      <Link className="menu-item" to='/smthPage'>SmthPage</Link>
-      <Link className="menu-item" to='/form'>Form</Link>
-      <Link className="menu-item" to='/nigga'>Black Nigga</Link>
+      <Link className="menu-list__link" to='/smthPage'>SmthPage</Link>
+      <Link className="menu-list__link" to='/form'>Form</Link>
+      <Link className="menu-list__link" to='/nigga'>Black Nigga</Link>
     </nav>
   )
 }
