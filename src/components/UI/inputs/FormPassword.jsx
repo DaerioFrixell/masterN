@@ -4,7 +4,7 @@ import './generalInputs.scss'
 export const FormPassword = ({ value, setValue }) => {
   return (
     <input
-      className="my-input"
+      className="input"
       placeholder="введите пароль"
       value={value}
       onChange={setValue}

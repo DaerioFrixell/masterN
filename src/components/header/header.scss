@@ -4,8 +4,4 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
   font-size: fonts.$mainFont;
-
-  &__logo {
-    font-size: fonts.$mainFont;
-  }
 }

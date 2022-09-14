@@ -1,12 +1,5 @@
-import React from "react";
+import React, { memo } from "react";
 import "./button.scss"
 
-export const MyButton = ({ toSubmit }) => {
-  return (
-    <button
-      className="my-button"
-      type="submit"
-      onClick={toSubmit}
-    >submit</button>
-  )
-}
+export const MyButton = memo(() => <button className="button" >just knopka</button>)
+

@@ -3,8 +3,6 @@ import './header.scss'
 
 export const Header = () => {
   return (
-    <div className="header" >
-      <div className="header__logo"> Hi, I am Master-Header</div>
-    </div >
+    <p className="header" >Hi, I am Master-Header</p >
   )
 }

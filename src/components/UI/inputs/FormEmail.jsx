@@ -4,7 +4,7 @@ import './generalInputs.scss'
 export const FormEmail = ({ value, setValue }) => {
   return (
     <input
-      className="my-input"
+      className="input"
       placeholder="введите email"
       value={value}
       onChange={setValue}

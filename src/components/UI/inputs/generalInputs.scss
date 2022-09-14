@@ -1,15 +1,11 @@
 @use '../../../scss/colors.scss' as colors;
 @use '../../../scss/fonts' as fonts;
+@import '../../../scss/mixin.scss';
 
-.my-input {
+.input {
+  @include button-input();
   font-size: fonts.$mainFont;
-  width: 17.5vw;
-  height: 4vh;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
   padding: 0rem 1rem;
-  border: 1px solid rgba(105, 105, 105, 0.269);
-  border-radius: 10px;
 
   &:focus {
     outline: 1px solid colors.$myBlue;
