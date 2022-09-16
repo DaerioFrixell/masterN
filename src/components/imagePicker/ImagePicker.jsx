@@ -30,7 +30,6 @@ export const ImagePicker = () => {
         onChange={handler}
         accept=".png, .jpg, .jpeg"
       />
-
       <div className='wrapper-img-picker' onClick={click}>
         {viewImage}
       </div>

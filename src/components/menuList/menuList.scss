@@ -1,18 +1,22 @@
 @use '../../scss/fonts' as fonts;
+@use '../../scss/colors.scss' as colors;
+@import '../../scss/mixin.scss';
 
 .menu-list {
-  font-size: fonts.$mainFont;
-  margin-top: 1rem;
+  @include paddings;
+  padding-top: 2rem;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 4.5vh);
+  grid-column: 1/2;
+  grid-template-rows: repeat(3, 3.5vh);
+  font-size: fonts.$mainFont;
+  height: 93vh;
 
   &__link {
     text-decoration: none;
     color: inherit;
 
     &:hover {
-      color: rgba(90, 4, 117, 0.881)
+      color: colors.$hover-dark;
     }
   }
 }
