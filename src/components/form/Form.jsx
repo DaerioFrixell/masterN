@@ -1,7 +1,7 @@
 import React, { memo, useState } from "react";
 import { ImagePicker } from "../imagePicker/ImagePicker";
 import './form.scss'
-import { MyButton } from "../UI/button/Button";
+import { Button } from "../UI/button/Button";
 import { FormEmail } from "../UI/inputs/FormEmail";
 import { FormLogin } from "../UI/inputs/FormLogin";
 import { FormPassword } from "../UI/inputs/FormPassword";
@@ -48,7 +48,7 @@ export const Form = memo(() => {
       <FormLogin value={loginValue} setValue={changeLoginInput} />
       <FormEmail value={emailValue} setValue={changeEmailInput} />
       <FormPassword value={passwordValue} setValue={changePasswordInput} />
-      <MyButton />
+      <Button />
     </form>
   )
 })
