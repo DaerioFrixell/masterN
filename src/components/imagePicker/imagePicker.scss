@@ -1,27 +1,28 @@
 @use '../../scss/fonts' as fonts;
+@use '../../scss/colors.scss' as colors;
+
+@mixin photoSize {
+  width: 18vw;
+  height: 45vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .input-file {
   display: none;
 }
 
 .wrapper-img-picker {
-  width: 18vw;
-  height: 45vh;
+  @include photoSize;
+  margin-bottom: 1vh;
   font-size: fonts.$mainFont;
   font-weight: bold;
   text-align: center;
   color: rgba(255, 255, 255, 0.758);
-
   background-image: url(./images/pudge.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 1vh;
 
   &__photo {
-    width: 19vw;
-    height: 45vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include photoSize;
   }
 
   &__text {
@@ -31,6 +32,5 @@
 
 .wrapper-img-picker:hover {
   opacity: .8;
-  color: rgba(235, 217, 116, 0.881);
-
+  color: colors.$hover-light;
 }

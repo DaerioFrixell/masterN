@@ -14,19 +14,13 @@ import { Nigga } from './components/nigga/Nigga';
 function App() {
   return (
     <div className="app">
-      <div className='app__header'>
-        <Header />
-      </div>
-      <div className='app__menu-list'>
-        <MenuList />
-      </div>
-      <div className='app__routes'>
-        <Routes>
-          <Route path='form' element={<Form />} />
-          <Route path='smthPage' element={<SmthPage />} />
-          <Route path='nigga' element={<Nigga />} />
-        </Routes>
-      </div>
+      <Header />
+      <MenuList />
+      <Routes>
+        <Route path='form' element={<Form />} />
+        <Route path='smthPage' element={<SmthPage />} />
+        <Route path='nigga' element={<Nigga />} />
+      </Routes>
     </div>
   );
 }

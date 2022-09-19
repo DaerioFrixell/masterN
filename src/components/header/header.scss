@@ -1,7 +1,14 @@
 @use '../../scss/fonts' as fonts;
+@use '../../scss/colors' as colors;
+@import '../../scss/mixin.scss';
 
 .header {
+  // padding: 1rem 0rem;
+  @include paddings;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-column: 1/7;
+  align-items: center;
+  height: 7vh;
   font-size: fonts.$mainFont;
+  background-color: colors.$header;
 }
