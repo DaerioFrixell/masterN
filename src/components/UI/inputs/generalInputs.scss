@@ -2,13 +2,12 @@
 @use '../../../scss/fonts' as fonts;
 @import '../../../scss/mixin.scss';
 
-.button {
+.input {
   @include button-input();
   font-size: fonts.$mainFont;
-  opacity: .8;
+  padding: 0rem 1rem;
 
-  &:hover {
-    background-color: colors.$myBlue;
-    opacity: 1;
+  &:focus {
+    outline: 1px solid colors.$myBlue;
   }
 }

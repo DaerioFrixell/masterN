@@ -1,86 +1,54 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { ImagePicker } from "../imagePicker/ImagePicker";
 import './form.scss'
+import { Button } from "../UI/button/Button";
+import { FormEmail } from "../UI/inputs/FormEmail";
+import { FormLogin } from "../UI/inputs/FormLogin";
+import { FormPassword } from "../UI/inputs/FormPassword";
 
-export const Form = () => {
-  const [login, setLogin] = useState('ваш логин')
-  const [valueLogin, setValueLogin] = useState('')
-
-  const [email, setEmail] = useState('ваш email')
-  const [valueEmail, setValueEmail] = useState('')
-
-  const [password, setPassword] = useState('ваш password')
-  const [valuePassword, setValuePassword] = useState('')
+export const Form = memo(() => {
+  const [login, setLogin] = useState('')
+  const [loginValue, setLoginValue] = useState('')
+  const [email, setEmail] = useState('')
+  const [emailValue, setEmailValue] = useState('')
+  const [password, setPassword] = useState('')
+  const [passwordValue, setPasswordValue] = useState('')
 
   const changeLoginInput = event => {
     const value = event.target.value;
-    setValueLogin(value);
+    setLoginValue(value);
   }
   const changeEmailInput = event => {
     const value = event.target.value;
-    setValueEmail(value);
+    setEmailValue(value);
   }
   const changePasswordInput = event => {
     const value = event.target.value;
-    setValuePassword(value);
-  }
-
-  const toSubmit = () => {
-    setLogin(valueLogin)
-    setEmail(valueEmail)
-    setPassword(valuePassword)
-
-    setValueLogin('')
-    setValueEmail('')
-    setValuePassword('')
+    setPasswordValue(value);
   }
 
   const handleSubmit = e => {
     e.preventDefault();
+    setLogin(loginValue)
+    setEmail(emailValue)
+    setPassword(passwordValue)
+
+    setLoginValue('')
+    setEmailValue('')
+    setPasswordValue('')
+
+    console.log(`вы ввели логин: ${login}`)
+    console.log(`вы ввели email: ${email}`)
+    console.log(`вы ввели пароль: ${password}`)
   }
 
   return (
-    <div >
-      <form
-        className="form"
-        onSubmit={handleSubmit}>
-        <ImagePicker />
-
-        <input
-          className="form__item-input"
-          placeholder="введите логин"
-          value={valueLogin}
-          onChange={changeLoginInput}
-        />
-
-        <input
-          className="form__item-input"
-          placeholder="введите email"
-          value={valueEmail}
-          onChange={changeEmailInput} />
-
-        <input
-          className="form__item-input"
-          placeholder="введите пароль"
-          value={valuePassword}
-          onChange={changePasswordInput} />
-
-        <button
-          className="form__item-btn"
-          type="submit"
-          onClick={toSubmit}
-        >submit</button>
-      </form>
-
-      <p className="form__answer">
-        ваш логин:<span className="form__answer-value" >{login}</span>
-      </p>
-      <p className="form__answer">
-        ваш email: <span className="form__answer-value">{email}</span>
-      </p>
-      <p className="form__answer">
-        ваш пароль: <span className="form__answer-value" >{password}</span>
-      </p>
-    </div>
+    <form className="form" onSubmit={handleSubmit}>
+      <ImagePicker />
+      <FormLogin value={loginValue} setValue={changeLoginInput} />
+      <FormEmail value={emailValue} setValue={changeEmailInput} />
+      <FormPassword value={passwordValue} setValue={changePasswordInput} />
+      <Button />
+    </form>
   )
-}
+})

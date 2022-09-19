@@ -1,10 +1,5 @@
-import React from "react";
+import React, { memo } from "react";
+import "./button.scss"
 
-const Button = ({ onClickchoosePhoto }) => {
+export const Button = memo(() => <button className="button" >just knopka</button>)
 
-  return (
-    <div>
-    </div>)
-}
-
-export default Button;

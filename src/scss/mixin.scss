@@ -1,0 +1,9 @@
+@mixin button-input {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  height: 4vh;
+  border: 1px solid rgba(105, 105, 105, 0.269);
+  border-radius: 10px;
+  width: 17.5vw;
+  min-width: 15vw;
+}
