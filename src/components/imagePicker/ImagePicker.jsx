@@ -3,7 +3,7 @@ import { useReducer } from 'react';
 import './imagePicker.scss'
 import { addPhoto, reducer } from './imageReducer';
 
-export const ImagePicker = () => {
+export const ImagePicker = ({ setImgInfo }) => {
   const myInput = useRef(null);
   const [state, dispatch] = useReducer(reducer, { image: null })
 
@@ -15,7 +15,9 @@ export const ImagePicker = () => {
     event.preventDefault();
     const file = myInput.current.files;
     const url = URL.createObjectURL(file[0])
+    setImgInfo(file[0])
     dispatch(addPhoto(url))
+
   }
 
   const viewImage = state.image

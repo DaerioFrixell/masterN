@@ -1,4 +1,4 @@
-import React, { memo, useReducer } from "react";
+import React, { memo, useReducer, useState } from "react";
 import { ImagePicker } from "../imagePicker/ImagePicker";
 import './form.scss'
 import { Button } from "../UI/button/Button";
@@ -18,6 +18,7 @@ export const Form = memo(() => {
   const [stateLogin, dispatchLogin] = useReducer(reducer, { login: '' })
   const [stateEmail, dispatchEmail] = useReducer(reducer, { email: '' })
   const [statePassword, dispatchPassword] = useReducer(reducer, { password: '' })
+  const [imgInfo, setImgInfo] = useState('')
 
   const changeLoginInput = event => {
     const login = event.target.value;
@@ -34,12 +35,18 @@ export const Form = memo(() => {
     dispatchPassword(addPassword(password))
   }
 
+  // const imgRequire = date => {
+  //   return date;
+  // }
+
   const handleSubmit = e => {
     e.preventDefault();
+
     console.log({
       login: stateLogin.login,
       email: stateEmail.email,
-      password: statePassword.password
+      password: statePassword.password,
+      img: imgInfo
     })
     dispatchLogin(clearLogin(''))
     dispatchEmail(clearEmail(''))
@@ -48,11 +55,11 @@ export const Form = memo(() => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <ImagePicker />
+      <ImagePicker setImgInfo={setImgInfo} />
       <Input value={stateLogin.login} qValue={changeLoginInput} />
       <Input value={stateEmail.email} qValue={changeEmailInput} />
       <Input value={statePassword.password} qValue={changePasswordInput} />
-      <Button />
+      <Button name={'sbmit'} />
     </form>
   )
 })
