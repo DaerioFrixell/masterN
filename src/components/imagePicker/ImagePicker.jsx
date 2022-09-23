@@ -1,12 +1,13 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
+import { useReducer } from 'react';
 import './imagePicker.scss'
+import { addPhoto, reducer } from './imageReducer';
 
 export const ImagePicker = () => {
   const myInput = useRef(null);
-  const [image, setImage] = useState(null)
+  const [state, dispatch] = useReducer(reducer, { image: null })
 
   const click = () => {
-    console.log('button is pressed')
     myInput.current.click();
   }
 
@@ -14,21 +15,22 @@ export const ImagePicker = () => {
     event.preventDefault();
     const file = myInput.current.files;
     const url = URL.createObjectURL(file[0])
-    setImage(url)
+    dispatch(addPhoto(url))
   }
 
-  const viewImage = image
-    ? (<img className='wrapper-img-picker__photo' src={image} alt={image} />)
+  const viewImage = state.image
+    ? (<img className='wrapper-img-picker__photo' src={state.image} alt={state.image} />)
     : (<div className='wrapper-img-picker__text'>choose photo</div>)
 
   return (
     <>
       <input
+        ref={myInput}
         className='input-file'
         type='file'
-        ref={myInput}
-        onChange={handler}
         accept=".png, .jpg, .jpeg"
+        onChange={handler}
+
       />
       <div className='wrapper-img-picker' onClick={click}>
         {viewImage}

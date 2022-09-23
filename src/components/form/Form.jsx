@@ -14,6 +14,9 @@ export const Form = memo(() => {
     setLogin(value);
   }
 
+  const a = 0;
+  a = 5;
+
   const changeEmailInput = event => {
     const value = event.target.value;
     setEmail(value);
