@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 export const Input = ({
   value,
-  setValue,
+  qValue,
   placeholder = "введите значение",
   className = "",
 }) => {
@@ -13,7 +13,7 @@ export const Input = ({
       className={cn("input", className)}
       placeholder={placeholder}
       value={value}
-      onChange={setValue}
+      onChange={qValue}
     />
   )
 }
