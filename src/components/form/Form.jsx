@@ -15,48 +15,43 @@ import {
 } from "./loginReducer";
 
 export const Form = memo(() => {
-  const [state, dispatch] = useReducer(reducer, {
-    login: '',
-    email: '',
-    password: '',
-  })
-  console.log(state)
+  const [stateLogin, dispatchLogin] = useReducer(reducer, { login: '' })
+  const [stateEmail, dispatchEmail] = useReducer(reducer, { email: '' })
+  const [statePassword, dispatchPassword] = useReducer(reducer, { password: '' })
 
   const changeLoginInput = event => {
     const login = event.target.value;
-    dispatch(addLogin(login))
-    console.log(login)
+    dispatchLogin(addLogin(login))
   }
 
   const changeEmailInput = event => {
     const email = event.target.value;
-    dispatch(addEmail(email))
-    console.log(email)
+    dispatchEmail(addEmail(email))
   }
 
   const changePasswordInput = event => {
     const password = event.target.value;
-    dispatch(addPassword(password))
-    console.log(password)
+    dispatchPassword(addPassword(password))
   }
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(`вы ввели логин: ${state.login}`)
-    console.log(`вы ввели email: ${state.email}`)
-    console.log(`вы ввели пароль: ${state.password}`)
-
-    dispatch(clearLogin(''))
-    dispatch(clearEmail(''))
-    dispatch(clearPassword(''))
+    console.log({
+      login: stateLogin.login,
+      email: stateEmail.email,
+      password: statePassword.password
+    })
+    dispatchLogin(clearLogin(''))
+    dispatchEmail(clearEmail(''))
+    dispatchPassword(clearPassword(''))
   }
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <ImagePicker />
-      <Input value={state.login} qValue={changeLoginInput} />
-      <Input value={state.email} qValue={changeEmailInput} />
-      <Input value={state.password} qValue={changePasswordInput} />
+      <Input value={stateLogin.login} qValue={changeLoginInput} />
+      <Input value={stateEmail.email} qValue={changeEmailInput} />
+      <Input value={statePassword.password} qValue={changePasswordInput} />
       <Button />
     </form>
   )
