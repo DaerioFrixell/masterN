@@ -56,10 +56,13 @@ export const Form = memo(() => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <ImagePicker setImgInfo={setImgInfo} />
-      <Input value={stateLogin.login} qValue={changeLoginInput} />
-      <Input value={stateEmail.email} qValue={changeEmailInput} />
-      <Input value={statePassword.password} qValue={changePasswordInput} />
-      <Button name={'sbmit'} />
+      <Input value={stateLogin.login} onChange={changeLoginInput} />
+      <Input value={stateEmail.email} onChange={changeEmailInput} />
+      <Input value={statePassword.password} onChange={changePasswordInput} />
+      <Button
+        nameBtn={'sbmit'}
+        onClick={() => console.log('click')}
+        isSubmit={true} />
     </form>
   )
 })

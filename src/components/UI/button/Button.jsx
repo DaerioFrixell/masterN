@@ -1,6 +1,10 @@
 import React, { memo } from "react";
 import "./button.scss"
 
-export const Button = memo(({ name }) =>
-  <button className="button" >{name}</button>)
+export const Button = memo(({ onClick, isSubmit, nameBtn }) =>
+  <button
+    className="button"
+    onClick={onClick}
+    type={isSubmit ? 'submit' : 'button'}
+  >{nameBtn}</button>)
 
