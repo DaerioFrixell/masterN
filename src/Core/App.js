@@ -10,10 +10,12 @@ import { MenuList } from '../components/menuList/MenuList';
 import { Form } from '../components/form/Form';
 import { SmthPage } from '../components/smthPage/SmthPage';
 import { Nigga } from '../components/nigga/Nigga';
+import { Clock } from '../components/clock/Clock';
 
 function App() {
   return (
     <div className="app">
+      <Clock />
       <Header />
       <MenuList />
       <Routes>
