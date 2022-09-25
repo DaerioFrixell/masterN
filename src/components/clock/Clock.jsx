@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./clock.scss";
 
-export const Clock = ({sec = 2000}) => {
+export const Clock = ({ sec = 2000 }) => {
   const [date, setDate] = useState(new Date());
 
   function refreshClock() {
@@ -15,7 +15,6 @@ export const Clock = ({sec = 2000}) => {
       clearInterval(clockInterval);
     };
   }, []);
-
 
   return (
     <div className="clock">

@@ -8,6 +8,7 @@ export const MenuList = () => {
       <Link className="menu-list__link" to='/smthPage'>SmthPage</Link>
       <Link className="menu-list__link" to='/form'>Form</Link>
       <Link className="menu-list__link" to='/nigga'>Black Nigga</Link>
+      <Link className="menu-list__link" to='/clockSettings'>Clock Settings</Link>
     </div>
   )
 }
