@@ -1,5 +1,11 @@
 import React, { memo } from "react";
-import "./button.scss"
+import cn from "classnames";
+import "./button.scss";
 
-export const Button = memo(() => <button className="button" >just knopka</button>)
-
+export const Button = memo(({ text, onClick, className }) => {
+  return (
+    <button className={cn("button", className)} onClick={onClick}>
+      {text}
+    </button>
+  );
+});

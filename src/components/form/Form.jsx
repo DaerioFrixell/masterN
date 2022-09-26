@@ -45,7 +45,7 @@ export const Form = memo(() => {
       <Input value={login} setValue={changeLoginInput} />
       <Input value={email} setValue={changeEmailInput} />
       <Input value={password} setValue={changePasswordInput} />
-      <Button />
+      <Button text = "just knopka"/>
     </form>
   );
 });

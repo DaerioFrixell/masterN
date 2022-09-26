@@ -1,11 +1,24 @@
-@use '../../../scss/colors.scss' as colors;
-@use '../../../scss/fonts' as fonts;
-@import '../../../scss/mixin.scss';
+@use "../../../scss/colors.scss" as colors;
+@use "../../../scss/fonts" as fonts;
+@import "../../../scss/mixin.scss";
 
 .button {
   @include button-input();
   font-size: fonts.$mainFont;
-  opacity: .8;
+  opacity: 0.8;
+
+  &:hover {
+    background-color: colors.$hover-light;
+    opacity: 1;
+  }
+}
+
+.settingsButton {
+  @include button-input();
+  font-size: fonts.$mainFont;
+  opacity: 0.8;
+  color: red;
+  text-align: center;
 
   &:hover {
     background-color: colors.$hover-light;
