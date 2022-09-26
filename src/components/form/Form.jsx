@@ -8,57 +8,53 @@ import {
   addLogin,
   addEmail,
   addPassword,
-
-  clearLogin,
-  clearEmail,
-  clearPassword,
+  clearForm,
 } from "./loginReducer";
+import { clearPhoto } from "../imagePicker/imageReducer";
 
 export const Form = memo(() => {
-  const [stateLogin, dispatchLogin] = useReducer(reducer, { login: '' })
-  const [stateEmail, dispatchEmail] = useReducer(reducer, { email: '' })
-  const [statePassword, dispatchPassword] = useReducer(reducer, { password: '' })
+  const [state, dispatch] = useReducer(reducer, {
+    login: "",
+    email: "",
+    password: "",
+    img: ""
+  })
   const [imgInfo, setImgInfo] = useState('')
 
   const changeLoginInput = event => {
     const login = event.target.value;
-    dispatchLogin(addLogin(login))
+    dispatch(addLogin(login))
   }
 
   const changeEmailInput = event => {
     const email = event.target.value;
-    dispatchEmail(addEmail(email))
+    dispatch(addEmail(email))
   }
 
   const changePasswordInput = event => {
     const password = event.target.value;
-    dispatchPassword(addPassword(password))
+    dispatch(addPassword(password))
   }
-
-  // const imgRequire = date => {
-  //   return date;
-  // }
 
   const handleSubmit = e => {
     e.preventDefault();
 
     console.log({
-      login: stateLogin.login,
-      email: stateEmail.email,
-      password: statePassword.password,
+      login: state.login,
+      email: state.email,
+      password: state.password,
       img: imgInfo
     })
-    dispatchLogin(clearLogin(''))
-    dispatchEmail(clearEmail(''))
-    dispatchPassword(clearPassword(''))
+    dispatch(clearForm(''))
+    dispatch(clearPhoto(''))
   }
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <ImagePicker setImgInfo={setImgInfo} />
-      <Input value={stateLogin.login} onChange={changeLoginInput} />
-      <Input value={stateEmail.email} onChange={changeEmailInput} />
-      <Input value={statePassword.password} onChange={changePasswordInput} />
+      <Input value={state.login} onChange={changeLoginInput} />
+      <Input value={state.email} onChange={changeEmailInput} />
+      <Input value={state.password} onChange={changePasswordInput} />
       <Button
         nameBtn={'sbmit'}
         onClick={() => console.log('click')}
