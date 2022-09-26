@@ -1,51 +1,64 @@
-import React, { memo, useState } from "react";
+import React, { memo, useReducer, useState } from "react";
 import { ImagePicker } from "../imagePicker/ImagePicker";
 import "./form.scss";
 import { Button } from "../UI/button/Button";
 import { Input } from "../UI/inputs/Input";
+import {
+  reducer,
+  addLogin,
+  addEmail,
+  addPassword,
+  clearForm,
+} from "./loginReducer";
+import { clearPhoto } from "../imagePicker/imageReducer";
 
 export const Form = memo(() => {
-  const [login, setLogin] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [state, dispatch] = useReducer(reducer, {
+    login: "",
+    email: "",
+    password: "",
+    img: ""
+  })
+  const [imgInfo, setImgInfo] = useState('')
 
-  const changeLoginInput = (event) => {
-    const value = event.target.value;
-    setLogin(value);
-  };
+  const changeLoginInput = event => {
+    const login = event.target.value;
+    dispatch(addLogin(login))
+  }
 
-  const changeEmailInput = (event) => {
-    const value = event.target.value;
-    setEmail(value);
-  };
+  const changeEmailInput = event => {
+    const email = event.target.value;
+    dispatch(addEmail(email))
+  }
 
-  const changePasswordInput = (event) => {
-    const value = event.target.value;
-    setPassword(value);
-  };
+  const changePasswordInput = event => {
+    const password = event.target.value;
+    dispatch(addPassword(password))
+  }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
-    setLogin(login);
-    setEmail(email);
-    setPassword(password);
 
-    console.log(`вы ввели логин: ${login}`);
-    console.log(`вы ввели email: ${email}`);
-    console.log(`вы ввели пароль: ${password}`);
-
-    setLogin("");
-    setEmail("");
-    setPassword("");
-  };
+    console.log({
+      login: state.login,
+      email: state.email,
+      password: state.password,
+      img: imgInfo
+    })
+    dispatch(clearForm(''))
+    dispatch(clearPhoto(''))
+  }
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <ImagePicker />
-      <Input value={login} setValue={changeLoginInput} />
-      <Input value={email} setValue={changeEmailInput} />
-      <Input value={password} setValue={changePasswordInput} />
-      <Button />
+      <ImagePicker setImgInfo={setImgInfo} />
+      <Input value={state.login} onChange={changeLoginInput} />
+      <Input value={state.email} onChange={changeEmailInput} />
+      <Input value={state.password} onChange={changePasswordInput} />
+      <Button
+        nameBtn={'sbmit'}
+        onClick={() => console.log('click')}
+        isSubmit={true} />
     </form>
-  );
-});
+  )
+})
