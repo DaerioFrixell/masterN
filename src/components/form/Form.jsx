@@ -19,6 +19,7 @@ export const Form = memo(() => {
     password: "",
     img: ""
   })
+
   const [imgInfo, setImgInfo] = useState('')
 
   const changeLoginInput = event => {
@@ -36,11 +37,8 @@ export const Form = memo(() => {
     dispatch(addPassword(password))
   }
 
-  const a = 5;
-
   const handleSubmit = e => {
     e.preventDefault();
-
     console.log({
       login: state.login,
       email: state.email,
