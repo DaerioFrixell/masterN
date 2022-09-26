@@ -36,6 +36,8 @@ export const Form = memo(() => {
     dispatch(addPassword(password))
   }
 
+  const a = 5;
+
   const handleSubmit = e => {
     e.preventDefault();
 
