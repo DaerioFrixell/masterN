@@ -8,7 +8,7 @@ import { Header } from '../components/header/Header';
 import { MenuList } from '../components/menuList/MenuList';
 import { Form } from '../components/form/Form';
 import { SmthPage } from '../components/smthPage/SmthPage';
-import { Nigga } from '../components/nigga/Nigga';
+import { StarWarsApi } from '../components/starWarsApi/StarWarsApi';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path='form' element={<Form />} />
         <Route path='smthPage' element={<SmthPage />} />
-        <Route path='nigga' element={<Nigga />} />
+        <Route path='starWarsApi' element={<StarWarsApi />} />
       </Routes>
     </div>
   );
