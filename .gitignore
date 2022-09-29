@@ -25,3 +25,5 @@ yarn-error.log*
 # MyCreateFiles
 /technicalDescription
 /gitChangeBranch
+
+/.idea
