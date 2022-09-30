@@ -6,7 +6,7 @@ export const Loader = ({ loading }) => {
   return (
     <div className="loader">
       <p className="loader__text">{loading}</p>
-      <div className="loader__rotate"></div>
+      <div className="loader__rotate" />
     </div>
   )
 }

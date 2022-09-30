@@ -16,7 +16,6 @@ export const People = () => {
         setPeopleList(response.data.results)
         const load = false
         setLoading(load)
-        console.log("loading: ", loading)
       })
       .catch(error => {
         setErr(error.message)
@@ -33,7 +32,7 @@ export const People = () => {
 
   return (
     <div className="people">
-      <div className="people__all">{isLoading}</div>
+      <div className="people__all" >{isLoading}</div>
       <p>{err}</p>
     </div >
   )
