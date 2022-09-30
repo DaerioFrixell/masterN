@@ -1,0 +1,12 @@
+.planets {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  height: 93vh;
+  background-color: rgba(0, 0, 0, 0.822);
+  color: white;
+
+  &__all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

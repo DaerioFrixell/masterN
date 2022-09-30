@@ -7,7 +7,7 @@ export const MenuList = () => {
     <div className="menu-list">
       <Link className="menu-list__link" to='/smthPage'>SmthPage</Link>
       <Link className="menu-list__link" to='/form'>Form</Link>
-      <Link className="menu-list__link" to='/nigga'>Black Nigga</Link>
+      <Link className="menu-list__link" to='/starWarsApi'>Star Wars Api</Link>
     </div>
   )
 }

@@ -4,14 +4,13 @@
 
 .menu-list {
   @include paddings;
-  padding-top: 2rem;
-  display: grid;
-  grid-column: 1/2;
-  grid-template-rows: repeat(3, 3.5vh);
   font-size: fonts.$mainFont;
   height: 93vh;
+  background: rgba(191, 190, 190, 0.806);
 
   &__link {
+    padding-bottom: 1rem;
+    display: block;
     text-decoration: none;
     color: inherit;
 

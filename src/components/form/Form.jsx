@@ -56,7 +56,7 @@ export const Form = memo(() => {
       <Input value={state.email} onChange={changeEmailInput} />
       <Input value={state.password} onChange={changePasswordInput} />
       <Button
-        nameBtn={'sbmit'}
+        nameBtn={'submit'}
         onClick={() => console.log('click')}
         isSubmit={true} />
     </form>

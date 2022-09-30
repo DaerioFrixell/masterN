@@ -3,6 +3,6 @@
 .app {
   background-color: colors.$primalBackground;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 12vw 88vw;
   height: auto;
 }
