@@ -1,42 +1,36 @@
 import React from "react";
-import axios from "axios";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { Loader } from "../../UI/loader/Loader";
+// import { Loader } from "../../UI/loader/Loader";
 import { PlanetTemplate } from "./planetTemplate/PlanetTemplate";
-
-// import './starWarsApi.scss'
-
+import { getPlanets } from "../../../models/planets/planet.services";
+import { addPlanetsAction } from "../../../models/planets/planet.action";
 
 export const Planets = () => {
-  const [planetsList, setPlanetsList] = useState([])
   const [err, setErr] = useState('')
-  const [loading, setLoading] = useState(true)
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    axios.get(`https://swapi.dev/api/planets/`)
-      .then((response) => {
-        setPlanetsList(response.data.results)
-        const load = false
-        setLoading(load)
-        console.log("loading: ", loading)
-      })
-      .catch(error => {
-        setErr(error.message)
-      })
-  }, [loading])
+  useEffect(
+    () => {
+      (async () => {
+        const { data } = await getPlanets();
+        dispatch(addPlanetsAction(data.results));
+      })()
+    }, []);
 
+  const planetsList = useSelector(state => state.planets.data)
   const all = planetsList.map(p => <PlanetTemplate
     key={p.created}
     name={p.name}
     population={p.population}
     rotate={p.rotation_period} />)
 
-  const isLoading = loading ? <Loader loading={"loading..."} /> : all
+  // const isLoading = loading ? <Loader loading={"loading..."} /> : all
 
   return (
     <div className="planets">
-      <div className="planets__all">{isLoading}</div>
+      <div className="planets__all">{all}</div>
       <p>{err}</p>
     </div >
   )

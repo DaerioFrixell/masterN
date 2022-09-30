@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const api = axios.create({
-  baseUrl: "https://swapi.dev/api/",
+export const SWApi = axios.create({
+  baseURL: process.env.REACT_APP_BASE_URL,
 })
 
