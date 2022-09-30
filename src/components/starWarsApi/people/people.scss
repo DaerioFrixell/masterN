@@ -1,0 +1,8 @@
+.planets {
+  display: grid;
+  grid-template-columns: repeat(3, 18rem);
+  border: 1px solid white;
+  padding: 1rem;
+  font-size: 2rem;
+
+}

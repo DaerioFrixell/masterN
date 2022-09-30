@@ -1,12 +1,12 @@
 .swa {
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  height: 93vh;
-  background-color: rgba(0, 0, 0, 0.822);
-  color: white;
+  background: dimgrey;
+  height: 83vh;
 
-  &__planets {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  &__link {
+    color: black;
+    display: block;
+    font-size: 2rem;
+    text-decoration: none;
   }
+
 }

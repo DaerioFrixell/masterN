@@ -1,10 +1,13 @@
 .loader {
   display: grid;
-  grid-template-rows: 2rem 1fr;
+  grid-template-rows: 3rem 1fr;
   margin: auto;
 
   &__text {
+    font-size: 2rem;
     text-align: center;
+    color: teal;
+    border-radius: 15px;
     margin: auto;
   }
 
