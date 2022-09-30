@@ -23,7 +23,6 @@ export const ImagePicker = ({ setImgInfo }) => {
     ? (<img className='wrapper-img-picker__photo' src={state.image} alt={state.image} />)
     : (<div className='wrapper-img-picker__text'>choose photo</div>)
 
-
   return (
     <>
       <input
@@ -32,7 +31,6 @@ export const ImagePicker = ({ setImgInfo }) => {
         type='file'
         accept=".png, .jpg, .jpeg"
         onChange={handler}
-
       />
       <div className='wrapper-img-picker' onClick={click}>
         {viewImage}
