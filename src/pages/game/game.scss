@@ -1,0 +1,24 @@
+.game {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__info {
+    padding: 10px;
+    width: 100%;
+    height: 45%;
+    border: 1px solid black;
+    border-radius: 12px;
+  }
+
+  &__controller {
+    padding: 10px;
+    width: 100%;
+    height: 45%;
+    border: 1px solid black;
+    border-radius: 12px;
+  }
+}

@@ -11,6 +11,8 @@ import { SmthPage } from '../components/smthPage/SmthPage';
 import { StarWarsApi } from '../components/starWarsApi/StarWarsApi';
 import { People } from '../components/starWarsApi/people/People';
 import { Planets } from '../components/starWarsApi/planets/Planets';
+import {Chess} from "../pages/chessPage/Chess";
+import {Game} from "../pages/game/Game";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path='starWarsApi' element={<StarWarsApi />} />
         <Route path='people' element={<People />} />
         <Route path='planets' element={<Planets />} />
+        <Route path='chess' element={<Chess />} />
+        <Route path='game' element={<Game />} />
       </Routes>
     </div>
   );
