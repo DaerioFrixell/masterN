@@ -41,9 +41,8 @@ export const addPassword = payload => ({
   payload
 })
 
-export const clearForm = payload => ({
-  type: CLEAR_FORM,
-  payload
+export const clearForm = () => ({
+  type: CLEAR_FORM
 })
 
 
